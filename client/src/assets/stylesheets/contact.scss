@@ -1,0 +1,55 @@
+@import "./_base";
+
+$bg-image: url("../images/contact_bg.png");
+
+.main-container {
+    background-image: $bg-image;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 1fr;
+    min-height: $custom-vh;
+    .contact-left {
+        @include flex-center;
+        .contact-darkness {
+            max-width: 100%;
+            object-fit: contain;
+        }
+    }
+    .contact-right {
+        @include flex-center;
+        flex-direction: column;
+        .contact-title {
+            font-family: $hana-font;
+            font-size: responsive-value(1);
+            text-align: justify;
+            margin-inline: responsive-value(1);
+        }
+        .contact-text {
+            font-family: $hana-font;
+            font-size: responsive-value(1);
+            text-align: justify;
+            margin-inline: responsive-value(1);
+        }
+        .contact-social-media-contact {
+            display: flex;
+        }
+    }
+}
+
+@media (min-width: $tablet-size) {
+    .contact-social-media-contact {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: $tablet-size) {
+    .contact-social-media-contact {
+        flex-direction: row;
+        margin-top: responsive-value(2);
+        padding-bottom: responsive-value(3);
+    }
+    .contact-right {
+        margin-top: -100px;
+    }
+}

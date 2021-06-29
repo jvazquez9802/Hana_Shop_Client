@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Turret+Road:wght@700&display=swap");
+
+$cool-black: #1b2021;
+$hana-font: "Turret Road", sans-serif;
+$custom-vh: 90vh;
+$tablet-size: 768px;
+
+@function responsive-value($value) {
+    @return calc(#{$value * 1em} + #{$value * 1vw});
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%unstyled-link {
+    text-decoration: none;
+    color: inherit;
+    &:focus,
+    &:hover,
+    &:visited,
+    &:link,
+    &:active {
+        color: inherit;
+        text-decoration: none;
+    }
+}
