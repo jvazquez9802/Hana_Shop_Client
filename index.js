@@ -9,18 +9,21 @@ app.use(express.json());
 
 //Controllers
 const productsController = require('./controllers/controllerProduct');
+//import user controller
 
-//Router for product
+//Routes for products
 
 app.get("/products", productsController.allProducts);
 
-app.get("/products/show/:uuid", (req, res) => {console.log(`Show ${req.params.uuid}`)});
+app.get("/products/show/:uuid", productsController.showProduct);
 
-app.post("/products/new", productsController.addProduct);
+app.post("/products/new", productsController.newProduct);
 
-app.put("/products/edit/:uuid", (req, res) => {console.log(`Edit ${req.params.uuid}`)});
+app.put("/products/edit/:uuid", productsController.editProduct);
 
-app.delete("/products/delete/:uuid", (req, res) => {console.log(`Delete ${req.params.uuid}`)});
+app.delete("/products/delete/:uuid", productsController.deleteProduct);
+
+//Rotes for users
 
 
 server.listen(PORT, () => {
