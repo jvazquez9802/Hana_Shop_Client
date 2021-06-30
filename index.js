@@ -9,6 +9,7 @@ app.use(express.json());
 
 //Controllers
 const productsController = require('./controllers/controllerProduct');
+const seriesController = require('./controllers/controllerSerie');
 //import user controller
 
 //Routes for products
@@ -23,7 +24,16 @@ app.put("/products/edit/:uuid", productsController.editProduct);
 
 app.delete("/products/delete/:uuid", productsController.deleteProduct);
 
-//Rotes for users
+//Routes for users
+
+//Routes for series
+app.get("/series", seriesController.allSeries);
+
+app.post("/series/new", seriesController.newSerie);
+
+app.put("/series/edit/:uuid", seriesController.editSerie);
+
+app.delete("/series/delete/:uuid", seriesController.deleteSerie);
 
 
 server.listen(PORT, () => {
