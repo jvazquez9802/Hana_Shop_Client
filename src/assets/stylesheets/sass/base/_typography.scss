@@ -1,0 +1,92 @@
+.unstyled-link {
+    text-decoration: none;
+    color: inherit;
+    &:focus,
+    &:hover,
+    &:visited,
+    &:link,
+    &:active {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+.styled-link {
+    font-family: $hana-font;
+    font-size: 2.5rem;
+    position: relative;
+    cursor: pointer;
+
+    &--animated {
+        &:after {
+            background: none repeat scroll 0 0 transparent;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 2px;
+            left: 50%;
+            position: absolute;
+            background: $color-black;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            width: 0;
+        }
+        &:hover:after {
+            width: 100%;
+            left: 0;
+        }
+        &:active {
+            transform: translateY(4px);
+        }
+    }
+
+}
+
+.heading-primary {
+    color: $color-black;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+    text-align: center;
+
+    &--main {
+        font-family: $hana-font-2;
+        display: block;
+        font-size: 5rem;
+        font-weight: 700;
+        letter-spacing: 1.5rem;
+        animation: moveInLeft 1s ease-out;
+        background-color: $color-black;
+        color: $color-white;
+    }
+
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        animation: moveInRight 1s ease-out;
+    }
+}
+
+.heading-secondary {
+    color: $color-black;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+    text-align: center;
+
+    &--main {
+        font-family: $hana-font-2;
+        display: block;
+        font-size: 4rem;
+        font-weight: 600;
+        letter-spacing: .5rem;
+        animation: moveInLeft 1s ease-out;
+    }
+
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 500;
+        animation: moveInRight 1s ease-out;
+    }
+}

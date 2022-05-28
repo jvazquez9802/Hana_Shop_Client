@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: inherit;
+}
+
+html {
+    //This defines what 1rem is
+    font-size: 62.5%;
+    font-family: $hana-font;
+    height: 100vh;
+}
+
+body {
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+#root, #root>div {
+    height: 100vh;
+}

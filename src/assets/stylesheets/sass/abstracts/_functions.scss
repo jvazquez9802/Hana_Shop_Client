@@ -1,0 +1,3 @@
+@function responsive-value($value) {
+    @return calc(#{$value * 1em} + #{$value * 1vw});
+}

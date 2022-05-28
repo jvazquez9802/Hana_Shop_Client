@@ -1,0 +1,38 @@
+.btn {
+    font-family: $hana-font;
+    font-size: $default-font-size;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem 4rem;
+    cursor: pointer;
+    border-radius: .6rem;
+    border: 0;
+    color: inherit;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    }
+
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    }
+
+    &--primary {
+        color: $color-white;
+        background-size: 300% 300%;
+        background-image: $main-gradient;
+        transition: 0.5s;
+
+        &:hover {
+            background-position: right center;
+        }
+    }
+
+    &--animated {
+        animation: moveInBottom 0.5s ease-out 0.75s;
+        animation-fill-mode: backwards;
+    }
+}

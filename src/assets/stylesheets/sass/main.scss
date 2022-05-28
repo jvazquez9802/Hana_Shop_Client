@@ -1,0 +1,27 @@
+//ABSTRACTS
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+@import "abstracts/motions";
+
+//BASE
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+//COMPONENTS
+@import "components/buttons";
+@import "components/social-media-contact";
+@import "components/navbar";
+
+//LAYOUT
+
+//PAGES
+@import "pages/about";
+@import "pages/contact";
+@import "pages/home";
+
+//THEMES
+
+//VENDORS

@@ -1,0 +1,128 @@
+.navbar {
+    background: linear-gradient(90deg, $color-primary 0%, $color-secondary 100%);
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+
+    @media screen and (max-width: $tablet-size) {
+        position: relative;
+    }
+
+    &__logo {
+        font-family: $hana-font-2;
+        color: $color-white;
+        justify-self: start;
+        margin-left: 2rem;
+        cursor: pointer;
+
+        @media screen and (max-width: $tablet-size) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(25%, 60%);
+        }
+    }
+
+    &__menu {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        grid-gap: 1rem;
+        list-style: none;
+        text-align: center;
+        width: 70vw;
+        justify-content: end;
+        margin-right: 2rem;
+
+        @media screen and (max-width: $tablet-size) {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            width: 100%;
+            height: 60vh;
+            position: absolute;
+            top: 8rem;
+            left: -100%;
+            opacity: 1;
+            transition: all 0.5s ease;
+        }
+
+        &--active {
+            @media screen and (max-width: $tablet-size) {
+                background: $color-primary;
+                left: 0;
+                opacity: 1;
+                transition: all 0.5s ease;
+                z-index: 1;
+            }
+        }
+    }
+
+    &__icon {
+        display: none;
+
+        @media screen and (max-width: $tablet-size) {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(-100%, 100%);
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+        &--times, &--bars {
+            color: $color-white;
+            font-size: 2.5rem;
+        }
+    }
+
+    &__links {
+        color: $color-white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+
+        @media screen and (max-width: $tablet-size) {
+            text-align: center;
+            padding: 2rem;
+            width: 100%;
+            display: table;
+        }
+
+        &:hover {
+            background-color: $color-primary;
+            border-radius: 4px;
+            transition: all 0.2s ease-out;
+
+            @media screen and (max-width: $tablet-size) {
+                background-color: $color-primary;
+                border-radius: 0;
+            }
+        }
+
+        &--mobile {
+            display: none;
+
+            @media screen and (max-width: $tablet-size) {
+                display: block;
+                text-align: center;
+                padding: 1.5rem;
+                margin: 2rem auto;
+                border-radius: 4px;
+                width: 80%;
+                background: #4ad9e4;
+                text-decoration: none;
+                color: $color-white;
+                font-size: 1.5rem;
+            }
+
+            &:hover {
+                @media screen and (max-width: $tablet-size) {
+                    background: $color-white;
+                    color: $color-primary;
+                    transition: 250ms;
+                }
+            }
+        }
+    }
+}
