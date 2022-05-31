@@ -11,6 +11,10 @@ html {
     font-size: 62.5%;
     font-family: $hana-font;
     height: 100vh;
+
+    @media only screen and (max-width: 68.75rem) {
+        font-size: 50%;
+    }
 }
 
 body {
@@ -19,5 +23,5 @@ body {
 }
 
 #root, #root>div {
-    height: 100vh;
+    min-height: 100vh;
 }

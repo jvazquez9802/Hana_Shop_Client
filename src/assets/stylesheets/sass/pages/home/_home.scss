@@ -1,0 +1,17 @@
+.home {
+    height: 100vh;
+    overflow: hidden scroll;
+    scroll-snap-type: y mandatory;
+
+    &__cover {
+        scroll-snap-align: start;
+    }
+
+    &__about {
+        scroll-snap-align: start;
+    }
+
+    &__contact {
+        scroll-snap-align: start;
+    }
+}

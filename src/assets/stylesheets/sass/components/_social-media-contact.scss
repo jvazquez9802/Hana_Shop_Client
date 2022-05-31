@@ -1,5 +1,11 @@
 .social-media-contact {
-    width: 40rem;
+    width: 100%;
+    max-width: 45rem;
+    background-color: rgba($color-white, 0.9);
+    border-radius: 15px;
+    text-decoration: none;
+    transition: all .25s ease;
+    padding: 1rem;
 
     &__contact {
         display: flex;
@@ -15,29 +21,32 @@
         float: left;
     }
 
+    &__arrow {
+        color: $color-black;
+        font-size: 3.5rem;
+        display: none;
+        margin-left: auto;
+    }
+
     &__url {
         font-family: $hana-font;
-        font-size: responsive-value(0.6);
+        font-size: 1.8rem;
         text-decoration: none;
         color: $color-black;
         margin-inline: responsive-value(0.7);
     }
 
-    @media (max-width: $tablet-size) {
-        &__url {
-            display: none;
-        }
+    &:hover {
+        box-shadow: 0px 1px 24px rgba(0, 0, 0, .2);
+        transform: translateX(1rem);
     }
 
-    @media (min-width: $tablet-size) {
-        &:hover {
-            background-color: rgba(255, 255, 255, 0.6);
-            border-radius: 15px;
-            transform: translateX(4px);
-        }
+    &:hover &__arrow {
+        display: block;
+        animation: rotate .45s ease-out;
+    }
 
-        &:active {
-            transform: translateY(4px);
-        }
+    &:active {
+        transform: translateY(4px);
     }
 }
