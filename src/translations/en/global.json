@@ -1,0 +1,13 @@
+{
+    "store": {
+        "name": "Hana Shop",
+        "description": "The biggest anime & videogame figures online shop"
+    },
+    "cover": {
+        "go_to_store": "Go to store"
+    },
+    "contact": {
+        "get_in_touch": "Get in touch",
+        "send_a_message": "Send us your cabbage!"
+    }
+}

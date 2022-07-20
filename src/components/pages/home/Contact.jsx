@@ -7,8 +7,11 @@ import ContactEmail from '../../../assets/images/contact_email.png';
 import ContactFacebook from '../../../assets/images/contact_facebook.png';
 import ContactInstagram from '../../../assets/images/contact_instagram.png';
 import HeadingSecondary from '../../utilities/typography/HeadingSecondary';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+    const [t, i18n] = useTranslation("global");
+
     return (
         <div className="contact">
             <div className="contact__content">
@@ -19,8 +22,8 @@ const Contact = () => {
                 </div>
                 <div className="contact__right flex-center">
                     <HeadingSecondary
-                        title="Get in touch"
-                        text="Send us your cabbage!" />
+                        title={t("contact.get_in_touch")}
+                        text={t("contact.send_a_message")} />
                     <div className="contact__social-media-contact flex-center">
                         <SocialMediaContact img={ContactEmail} text="hanaShop@gmail.com" url="#" />
                         <SocialMediaContact img={ContactFacebook} text="Hana Shop Culture" url="#" />

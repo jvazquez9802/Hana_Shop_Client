@@ -2,10 +2,38 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
+import {I18nextProvider} from "react-i18next";
+import i18next from "i18next";
+import LanguageDetector from 'i18next-browser-languagedetector';
+
+import global__es from "./translations/es/global.json";
+import global__en from "./translations/en/global.json";
+
+i18next.use(LanguageDetector);
+
+i18next.init({
+  interpolation: { escapeValue: false },
+  //lng: "en",
+  fallbackLng: "en",
+  detection: {
+    order: ['querystring', 'cookie', 'localStorage', 'sessionStorage', 'navigator', 'htmlTag', 'path', 'subdomain'],
+    caches: ['cookie']
+  },
+  resources: {
+    es: {
+      global: global__es
+    },
+    en: {
+      global: global__en
+    }
+  }
+});
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <I18nextProvider i18n={i18next}>
+      <App />
+    </I18nextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
