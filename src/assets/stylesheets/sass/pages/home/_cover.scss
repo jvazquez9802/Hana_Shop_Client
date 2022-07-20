@@ -1,0 +1,65 @@
+$bg-image: url("../../../../images/main_bg.jpg");
+
+.cover {
+    height: 100vh;
+    max-height: 100%;
+    grid-auto-rows: 1fr;
+    min-height: $custom-vh;
+    animation: 1s linear forwards;
+    padding: 3rem;
+
+    &__content {
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        background-image: $main-gradient-transparency, $bg-image;
+        background-size: cover;
+
+        @media screen and (max-width: $tablet-size) {
+            padding: 0 1.5rem;
+        }
+    }
+
+    &__hana {
+        max-width: 100%;
+        bottom: 0;
+        object-fit: contain;
+    }
+
+    &__text {
+        font-size: responsive-value(1);
+        text-align: justify;
+        margin-inline: responsive-value(1);
+    }
+
+    &__link {
+        font-family: $hana-font;
+        font-size: responsive-value(1);
+        margin-inline: responsive-value(1);
+        position: relative;
+        cursor: pointer;
+
+        &:after {
+            background: none repeat scroll 0 0 transparent;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 2px;
+            left: 50%;
+            position: absolute;
+            background: $color-black;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            width: 0;
+        }
+
+        &:hover:after {
+            width: 100%;
+            left: 0;
+        }
+
+        &:active {
+            transform: translateY(4px);
+        }
+    }
+}

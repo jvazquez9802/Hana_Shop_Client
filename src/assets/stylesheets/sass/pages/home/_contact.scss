@@ -1,0 +1,85 @@
+$bg-image: url("../../../../images/contact_bg.jpg");
+$bg-darkness: url("../../../../images/contact_darkness.png");
+
+.contact {
+    height: 100vh;
+    max-height: 100%;
+    padding: 3rem;
+
+    &__content {
+        height: 100%;
+        overflow: hidden;
+        background-image: linear-gradient(to right bottom, rgba($color-primary, 0.7), rgba($color-secondary, 0.7)), $bg-image;
+        background-size: cover;
+        clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+        grid-auto-rows: 1fr;
+    }
+
+    &__darkness {
+        max-width: 100%;
+        object-fit: contain;
+        z-index: 5;
+
+        @media (max-width: 60rem) {
+            max-width: 70%;
+        }
+    }
+
+    &__left {
+        position: relative;
+        background-image: $bg-darkness;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin: 1.5rem;
+    }
+
+    &__lettuce {
+        position: absolute;
+        motion-rotation: reverse;
+        left: 10rem;
+        top: 12rem;
+        display: none;
+
+        @media (min-width: $desktop-sm-size) {
+            display: block;
+        }
+
+        &--1 {
+            animation: move-1 5s linear infinite;
+            motion-path: $motion-path-1;
+            offset-path: $motion-path-1;
+        }
+
+        &--2 {
+            animation: move-2 6.5s linear infinite;
+            motion-path: $motion-path-2;
+            offset-path: $motion-path-2;
+        }
+
+        &--3 {
+            animation: move-3 7s linear infinite;
+            motion-path: $motion-path-3;
+            offset-path: $motion-path-3;
+        }
+    }
+
+
+    &__right {
+        flex-direction: column;
+    }
+
+    &__social-media-contact {
+        width: 80%;
+        display: flex;
+        gap: 1.5rem;
+        padding: 2rem;
+        flex-direction: column;
+
+        @media (max-width: $tablet-size) {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "store": {
+        "name": "Hana Shop",
+        "description": "La tienda online más grande de figuras de anime"
+    },
+    "cover": {
+        "go_to_store": "Ir a la tienda"
+    },
+    "contact": {
+        "get_in_touch": "Mantente en contacto",
+        "send_a_message": "¡Envíanos tu lechuga!"
+    }
+}

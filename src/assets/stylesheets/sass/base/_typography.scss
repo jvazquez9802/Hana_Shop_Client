@@ -57,6 +57,7 @@
         animation: moveInLeft 1s ease-out;
         background-color: $color-black;
         color: $color-white;
+        margin-bottom: 2rem;
     }
 
     &--sub {
@@ -71,7 +72,6 @@
     color: $color-black;
     text-transform: uppercase;
     backface-visibility: hidden;
-    margin-bottom: 6rem;
     text-align: center;
 
     &--main {
