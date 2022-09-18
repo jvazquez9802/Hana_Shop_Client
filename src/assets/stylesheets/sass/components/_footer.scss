@@ -1,0 +1,27 @@
+.footer {
+    width: 100%;
+    padding: 5rem;
+    background-color: $color-black-light;
+    color: $color-white;
+    font-family: $hana-font;
+    font-size: 1.5rem;
+
+    &__content {
+
+        
+    }
+
+    &__container__heading {
+        
+    }
+
+    &__container__links {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__heading {
+        display: flex;
+        color: $color-white;
+    }
+}

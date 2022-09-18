@@ -9,5 +9,11 @@
     "contact": {
         "get_in_touch": "Mantente en contacto",
         "send_a_message": "¡Envíanos tu lechuga!"
+    },
+    "help_links": {
+        "faq": "FAQ",
+        "customer_service": "SERVICIO AL CLIENTE",
+        "shipping_and_returns": "ENVÍOS Y DEVOLUCIONES",
+        "privacy_policy": "POLÍTICA DE PRIVACIDAD"
     }
 }

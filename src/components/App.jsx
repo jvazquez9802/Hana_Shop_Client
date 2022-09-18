@@ -6,6 +6,7 @@ import '../assets/stylesheets/sass/main.scss'
 //Components
 //import Navbar from './utilities/navbar/Navbar';
 import Body from './Body';
+import Footer from './Footer';
 //import Footer from './Footer';
 import Home from './pages/home/Home';
 
@@ -18,6 +19,7 @@ const App = () => {
           <Switch>
             <Route exact path="/" component={Home}/>
           </Switch>
+          <Footer />
         </Router>
      </Body>
     </>

@@ -9,5 +9,11 @@
     "contact": {
         "get_in_touch": "Get in touch",
         "send_a_message": "Send us your cabbage!"
+    },
+    "help_links": {
+        "faq": "FAQ",
+        "customer_service": "CUSTOMER SERVICE",
+        "shipping_and_returns": "SHIPPING & RETURNS",
+        "privacy_policy": "PRIVACY POLICY"
     }
 }
